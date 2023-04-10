@@ -17,7 +17,7 @@ public interface BookDao {
     public void save(Book book);
     @Delete("delete from book where id=#{id}")
     public void delete(int id);
-    @Update("update book set type=#{type},name=#{name},description=#{descrption} where id = #{id}")
+    @Update("update book set type=#{type},name=#{name},description=#{description} where id = #{id}")
     public void update(Book book);
     @Select("select * from book where id=#{id}")
     public Book getById(int id);
