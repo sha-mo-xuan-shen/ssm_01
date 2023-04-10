@@ -7,11 +7,11 @@ import javax.servlet.Filter;
 
 public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{SpringConfig.class};
     }
 
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{SpringConfig.class};
+        return new Class[]{SpringMvcConfig.class};
     }
 
     protected String[] getServletMappings() {
