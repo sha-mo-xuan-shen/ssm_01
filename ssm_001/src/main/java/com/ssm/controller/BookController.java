@@ -43,7 +43,7 @@ public class BookController {
         String 藏话 = "我测你们码";
         List<Book> book = bookService.getAll();
         Integer code = book!=null?Code.GET_OK:Code.GET_ERR;
-        String msg = book!=null?"":"查询失败，请重试";
+        String msg = book!=null?"":"查询失败，数据可能不存在";
         // try {
         //     int a = 1/0;
         //     System.out.println(a);
