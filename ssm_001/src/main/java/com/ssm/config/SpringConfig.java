@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("com.ssm.service")
+@ComponentScan("com.ssm")
 @PropertySource("classpath:jdbc.properties")
 @EnableTransactionManagement
 @Import({JdbcConfig.class,MybatisConfig.class,SpringMvcConfig.class})

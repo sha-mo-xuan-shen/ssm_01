@@ -52,4 +52,11 @@
   <build>
     <finalName>ssm_01</finalName>
   </build>
+  <!-- 这里定义了maven 编译的jdk和代码的编码方式 -->
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
 </project>

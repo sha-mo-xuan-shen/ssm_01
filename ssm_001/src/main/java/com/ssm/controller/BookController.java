@@ -40,9 +40,16 @@ public class BookController {
     @GetMapping
     public Result getAll() {
 
+        String 藏话 = "我测你们码";
         List<Book> book = bookService.getAll();
         Integer code = book!=null?Code.GET_OK:Code.GET_ERR;
         String msg = book!=null?"":"查询失败，请重试";
+        // try {
+        //     int a = 1/0;
+        //     System.out.println(a);
+        // }catch (Exception e){
+            System.out.println(藏话);
+        // }
         return new Result(code,book,msg);
     }
 }
