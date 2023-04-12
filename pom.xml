@@ -51,7 +51,27 @@
   </dependencies>
   <build>
     <finalName>ssm_01</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory><!--所在的目录-->
+        <includes><!--包括目录下的.properties,.xml 文件都会被扫描到-->
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+
+      <resource>
+        <directory>src/main/webapp</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
   </build>
+
   <!-- 这里定义了maven 编译的jdk和代码的编码方式 -->
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
