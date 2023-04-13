@@ -20,6 +20,6 @@ public class ProjectExcptionAdvice {
     }
     @ExceptionHandler(Exception.class)
     public Result doException(Exception e){
-        return new Result(Code.SYSTEM_UNKNOW_ERR, (Object) null,"未知错误");
+        return new Result(Code.SYSTEM_UNKNOW_ERR, (Object) null,"我不会修");
     }
 }

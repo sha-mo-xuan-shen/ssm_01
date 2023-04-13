@@ -14,7 +14,7 @@ public class BookController {
     @Autowired
     public BookService bookService;
 
-    @PostMapping("/save")
+    @PostMapping
     public Result save(@RequestBody Book book) {
         boolean flag = bookService.save(book);
         return new Result(flag?Code.SAVE_OK:Code.SAVE_ERR,flag);
@@ -24,7 +24,7 @@ public class BookController {
         boolean flag = bookService.delete(id);
         return new Result(flag?Code.DELETE_OK:Code.DELETE_ERR,flag);
     }
-    @PutMapping("/update")
+    @PutMapping
     public Result update(@RequestBody Book book) {
         boolean flag = bookService.update(book);
         return new Result(flag?Code.UPDATE_OK:Code.UPDATE_ERR,flag);

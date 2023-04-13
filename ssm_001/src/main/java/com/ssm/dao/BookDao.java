@@ -14,11 +14,11 @@ public interface BookDao {
 
     // @Insert("insert into book values (null,#{type},#{name},#{description})")
     @Insert("insert into book (type,name,description)values(#{type},#{name},#{description})")
-    public void save(Book book);
+    public int save(Book book);
     @Delete("delete from book where id=#{id}")
-    public void delete(int id);
+    public int delete(int id);
     @Update("update book set type=#{type},name=#{name},description=#{description} where id = #{id}")
-    public void update(Book book);
+    public int update(Book book);
     @Select("select * from book where id=#{id}")
     public Book getById(int id);
     @Select("select * from book")
