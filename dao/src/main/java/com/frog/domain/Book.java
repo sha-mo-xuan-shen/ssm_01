@@ -1,4 +1,4 @@
-package com.ssm.domain;
+package com.frog.domain;
 
 
 import lombok.AllArgsConstructor;
@@ -11,8 +11,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Book {
-    public Integer id;
-    public String name;
-    public String type;
-    public String description;
+    int id;
+    String type;
+    String description;
+    String name;
 }

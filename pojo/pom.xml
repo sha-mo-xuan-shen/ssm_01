@@ -6,15 +6,16 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ssm_001</artifactId>
+    <artifactId>pojo</artifactId>
     <packaging>war</packaging>
-    <name>ssm_001 Maven Webapp</name>
+    <name>ssm_003 Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
-            <artifactId>pojo</artifactId>
-            <groupId>org.example</groupId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -22,19 +23,8 @@
             <version>1.18.22</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>5.2.9.RELEASE</version>
-        </dependency>
     </dependencies>
     <build>
-        <finalName>ssm_001</finalName>
+        <finalName>pojo</finalName>
     </build>
 </project>

@@ -7,16 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>ssm_001</module>
+      <module>ssm_002</module>
+      <module>pojo</module>
+      <module>dao</module>
   </modules>
   <name>ssm_01 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -48,6 +45,22 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.9.0</version>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.2.9.RELEASE</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>ssm_01</finalName>
@@ -78,5 +91,14 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  <distributionManagement>
+    <repository>
+      <id>frog-release</id>
+      <url>http://localhost:8081/repository/frog-release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>frog-hosted</id>
+      <url>http://localhost:8081/repository/frog-hosted/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>

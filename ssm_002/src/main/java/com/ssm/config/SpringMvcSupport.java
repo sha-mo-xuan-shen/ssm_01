@@ -1,6 +1,6 @@
 package com.ssm.config;
 
-import com.ssm.controller.intercpetor.ProjectInterceptor;
+import com.ssm.controller.interceptor.ProjectInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -9,20 +9,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
-
     @Autowired
-    ProjectInterceptor projectInterceptor;
-
+    private ProjectInterceptor projectInterceptor;
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/pages/**").addResourceLocations("/pages/");
-        registry.addResourceHandler("/js/**").addResourceLocations("/js/");
-        registry.addResourceHandler("/plugins/**").addResourceLocations("/plugins/");
-        registry.addResourceHandler("/css/**").addResourceLocations("/css/");
     }
-
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(projectInterceptor).addPathPatterns("/books");
+        //配置拦截器
+        registry.addInterceptor(projectInterceptor).addPathPatterns("/books" );
     }
 }
+

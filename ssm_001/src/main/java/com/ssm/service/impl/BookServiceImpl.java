@@ -1,10 +1,8 @@
 package com.ssm.service.impl;
 
 import com.ssm.controller.Code;
-import com.ssm.controller.Result;
 import com.ssm.dao.BookDao;
 import com.ssm.domain.Book;
-import com.ssm.exception.BussinessException;
 import com.ssm.exception.SystemException;
 import com.ssm.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
